@@ -28,7 +28,7 @@ struct SpeculativeDecodingTests {
         let mainModel = Gemma3TextModel(modelConfig)
 
         // on hardware with a NAX, float32 (the default dtype) runs
-        // in tf32 in bach mode and float32 in non-batch.  this
+        // in tf32 in batch mode and float32 in non-batch.  this
         // change in behavior can cause issues with prediction and
         // doesn't match real world behavior (where float32 is not used)
         mainModel.apply {
